@@ -11,8 +11,10 @@ func main() {
 	friutArr[1] = "Orange"
 
 	fruits := [2]string{"Apples", "Oranges"}
+	fruit := [2]string{"Apples", "Oranges"}
 
 	fmt.Println(friutArr)
 	fmt.Println(friutArr[1])
 	fmt.Println(fruits)
+	fmt.Println(fruit)
 }
