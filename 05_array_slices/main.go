@@ -11,10 +11,12 @@ func main() {
 	friutArr[1] = "Orange"
 
 	fruits := [2]string{"Apples", "Oranges"}
-	fruit := [2]string{"Apples", "Oranges"}
+	fruitSlice := []string{"Apples", "Oranges", "Grappes"}
 
 	fmt.Println(friutArr)
 	fmt.Println(friutArr[1])
 	fmt.Println(fruits)
-	fmt.Println(fruit)
+	fmt.Println(fruitSlice)
+	fmt.Println(len(fruitSlice))
+	fmt.Println(fruitSlice[1:2])
 }
