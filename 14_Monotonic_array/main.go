@@ -16,6 +16,6 @@ func isMonotonic(A []int) bool {
 }
 
 func main() {
-	arr := []int{1, 1, 2, 3, 4, 5, 7, 5, 5, 6, 7, 8, 8, 9, 10, 11}
+	arr := []int{1, 1, 2, 3, 4, 5, 5, 5, 6, 7, 8, 8, 9, 10, 11}
 	fmt.Println(isMonotonic(arr))
 }
