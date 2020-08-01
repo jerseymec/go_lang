@@ -5,13 +5,6 @@ import (
 	"fmt"
 )
 
-package main
-
-import (
-"errors"
-"fmt"
-)
-
 func f1(arg int) (int, error) {
 	if arg == 42 {
 
