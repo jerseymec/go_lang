@@ -2,6 +2,10 @@ package main
 
 import "fmt"
 
+func zeroptr(ptr *int) {
+	*ptr = 0
+}
+
 func main() {
 	a := 5
 	b := &a
@@ -13,6 +17,11 @@ func main() {
 	//use * to read val from address
 	fmt.Println("b= ", *b)
 	*b = 10
+	i := 5
+	fmt.Println("i = ", i)
+
+	zeroptr(&i)
+	fmt.Println("i = ", i)
 
 	fmt.Println(a)
 	fmt.Println(*b)
