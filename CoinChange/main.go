@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	coins := []int{5, 7, 1, 1, 2, 3, 22}
+	coins := []int{5, 7, 1, 1, 2, 3, 8, 22}
 	fmt.Println("Minimum coin value that cannot be constructed = ", NonConstructibleChange(coins))
 }
 
