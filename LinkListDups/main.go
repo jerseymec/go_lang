@@ -8,22 +8,26 @@ type LinkedList struct {
 	Next  *LinkedList
 }
 
-func main(){
-	header := &LinkedList{Value: 1,}
+func main() {
+	header := &LinkedList{Value: 1}
 	// header.Value := 1
-	tail := &LinkedList{Value : 1,}
-	header.Next := tail
-	node := &LinkedList{Value : 2}
+	tail := &LinkedList{Value: 1}
+	header.Next = tail
+	node := &LinkedList{Value: 2}
 	tail.Next = node
-	node := &LinkedList{Value : 3}
-	tail.Next = node
-	node := &LinkedList{Value : 5}
-	tail.Next = node
-	node := &LinkedList{Value : 5}
-	tail.Next = node
-	node := &LinkedList{Value : 6}
-	tail.Next = node
-	
+	tail = tail.Next
+	node1 := &LinkedList{Value: 3}
+	tail.Next = node1
+	tail = tail.Next
+	node2 := &LinkedList{Value: 5}
+	tail.Next = node2
+	tail = tail.Next
+	node3 := &LinkedList{Value: 5}
+	tail.Next = node3
+	tail = tail.Next
+	node4 := &LinkedList{Value: 6}
+	tail.Next = node4
+	tail = tail.Next
 
 	// tail.Value := 2
 	// tail := tail.Next
@@ -32,8 +36,20 @@ func main(){
 	// tail.Value :=4
 
 	fmt.Println("List := ", header)
-	fmt.Println("Removing Dups : ", RemoveDuplicatesFromLinkedList(header))	
+	PrintLinkedList(header)
+	fmt.Println("Removing Dups : ", RemoveDuplicatesFromLinkedList(header))
+	PrintLinkedList(header)
 
+}
+
+func PrintLinkedList(linkedlist *LinkedList) {
+
+	head := linkedlist
+
+	for head.Next != nil {
+		fmt.Println(head.Value)
+		head = head.Next
+	}
 }
 
 func RemoveDuplicatesFromLinkedList(linkedList *LinkedList) *LinkedList {
