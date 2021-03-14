@@ -32,6 +32,7 @@ func (l *LinkedList) deleteWithValue(val int) {
 	if l.head.Key == val {
 		l.head = l.head.Next
 		l.length--
+		return
 	}
 	previousToDelete := l.head
 
