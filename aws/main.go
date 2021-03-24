@@ -17,7 +17,7 @@ var (
 
 const (
 	//BUCKET_NAME = "test"
-	BUCKET_NAME = "charlessobraj123"
+	BUCKET_NAME = "charlessWH123"
 	REGION      = "us-east-2"
 )
 
@@ -122,7 +122,7 @@ func deletefile(filename string) (resp *s3.DeleteObjectOutput) {
 
 func main() {
 	//fmt.Println("My Buckets are : ", listBuckets())
-	//fmt.Println("Create Bucket Charlessobraj : ", createBucket())
+	//fmt.Println("Create Bucket : ", createBucket())
 	//fmt.Println("My Buckets are : ", listBuckets())
 	//fmt.Println("Uploading objects to My Buckets: ")
 	//uploadObjects("files/im1.png")
