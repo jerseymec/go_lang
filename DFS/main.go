@@ -14,6 +14,6 @@ func (n *Node) DepthFirstSearch(array []string) []string {
 	return array
 }
 
-func main(){
-	
+func main() {
+
 }
