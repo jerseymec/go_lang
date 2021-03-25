@@ -2,10 +2,10 @@ package main
 
 import "fmt"
 
-func sum(nums...int) int  {
+func sum(nums ...int) int {
 
 	sum := 0
-	for _, val := range nums{
+	for _, val := range nums {
 		sum += val
 
 	}
@@ -22,8 +22,8 @@ func adder() func(int) int {
 }
 func main() {
 
-	n := []int {3,4,5,6}
-	fmt.Println("sum = ",sum(n...))
+	n := []int{3, 4, 5, 6}
+	fmt.Println("sum = ", sum(n...))
 	sum := adder()
 	for i := 0; i < 10; i++ {
 		fmt.Println(sum(i))
