@@ -38,7 +38,6 @@ spec:
               command:
                 type: string
               schedule:
-                description: Foo is an example field of At. Edit at_types.go to remove/update
                 type: string
             type: object
           status:

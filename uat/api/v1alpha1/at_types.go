@@ -34,7 +34,6 @@ type AtSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
 
-	// Foo is an example field of At. Edit at_types.go to remove/update
 	Schedule string `json:"schedule,omitempty"`
 	Command  string `json:"command,omitempty"`
 }

@@ -29,16 +29,14 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/client"
-	"sigs.k8s.io/controller-runtime/pkg/log"
-
 	uatv1alpha1 "uat/api/v1alpha1"
 )
 
 // AtReconciler reconciles a At object
 type AtReconciler struct {
 	client.Client
-	Scheme *runtime.Scheme
 	Log    logr.Logger
+	Scheme *runtime.Scheme
 }
 
 //+kubebuilder:rbac:groups=uat.jerseymec.dev,resources=ats,verbs=get;list;watch;create;update;patch;delete
@@ -55,7 +53,7 @@ type AtReconciler struct {
 // For more details, check Reconcile and its Result here:
 // - https://pkg.go.dev/sigs.k8s.io/controller-runtime@v0.13.0/pkg/reconcile
 func (r *AtReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.Result, error) {
-	_ = log.FromContext(ctx)
+	//_ = log.FromContext(ctx)
 
 	// TODO(user): your logic here
 	reqLogger := r.Log.WithValues("at", req.NamespacedName)
@@ -144,8 +142,12 @@ func (r *AtReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.Re
 
 // SetupWithManager sets up the controller with the Manager.
 func (r *AtReconciler) SetupWithManager(mgr ctrl.Manager) error {
-	return ctrl.NewControllerManagedBy(mgr).
+	err := ctrl.NewControllerManagedBy(mgr).
 		For(&uatv1alpha1.At{}).
 		Owns(&corev1.Pod{}).
 		Complete(r)
+	if err != nil {
+		return err
+	}
+	return nil
 }
