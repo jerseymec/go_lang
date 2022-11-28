@@ -1,0 +1,16 @@
+domain: jerseymec.dev
+layout:
+- go.kubebuilder.io/v3
+projectName: uat
+repo: uat
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: jerseymec.dev
+  group: uat
+  kind: At
+  path: uat/api/v1alpha1
+  version: v1alpha1
+version: "3"
